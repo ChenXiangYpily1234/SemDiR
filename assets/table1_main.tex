@@ -1,0 +1,28 @@
+\begin{table*}[!t]
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.0}
+\caption{\textbf{ADE20K at 160K.} Accuracy means over seeds 0--2; SS/MS: single-/multi-scale mIoU and mAcc (\%). Parameters include auxiliary heads; M/G: million/billion. FLOPs count supported $512\times2048$ operators, with one multiply--add counted as one operation. Bold: best accuracy within each backbone. Parentheses show accuracy gains over Vanilla with the same backbone, in percentage points. Citations identify source methods; competitor results are local adaptations. Vanilla excludes SemDiR.}\label{tab:main}
+\begin{tabular*}{\textwidth}{@{}ll@{\hspace{8pt}}cc@{\extracolsep{\fill}}cccc@{}}\toprule
+\multirow{2}{*}{\zsavepos{main-table-left}\textbf{Backbone}} & \multirow{2}{*}{\zsavepos{main-table-method}\textbf{Method}} & \multirow{2}{*}{\textbf{Params (M)}} & \multirow{2}{*}{\textbf{FLOPs (G)}} & \multicolumn{2}{c}{\textbf{mIoU (\%)}$\uparrow$} & \multicolumn{2}{c}{\textbf{mAcc (\%)}$\uparrow$}\\
+\cmidrule(lr){5-6}\cmidrule(lr){7-8}
+ & & & & \textbf{SS} & \textbf{MS} & \textbf{SS} & \textbf{MS}\\\midrule
+\multirow{5}{*}{DeiT-S/16} & Vanilla & 53.55 & 958.57 & 42.93 & 43.72 & 55.87 & 55.55\\
+ & ViTController~\cite{lin2023controller} {\scriptsize(ICASSP\textquotesingle23)} & 53.55 & 958.57 & 45.25 & 45.66 & 56.11 & 55.41\\
+ & FDAM~\cite{chen2025fdam} {\scriptsize(ICCV\textquotesingle25)} & 54.13 & 1113.57 & 45.49 & 45.83 & 56.21 & 55.56\\
+ & LocAt~\cite{hajimiri2026locality} {\scriptsize(ICLR\textquotesingle26)} & 53.55 & 958.63 & 45.61 & 45.88 & 56.60 & 55.67\\
+ & \highlightmethod{main-table}\textbf{\method{} (ours)} & 53.62 & 960.44 & \textbf{45.99}\,{\scriptsize(+3.06)} & \textbf{46.63}\,{\scriptsize(+2.91)} & \textbf{57.47}\,{\scriptsize(+1.60)} & \textbf{56.90}\,{\scriptsize(+1.35)}\\
+\midrule
+\multirow{5}{*}{Swin-T} & Vanilla & 59.94 & 945.66 & 44.83 & 45.98 & 53.86 & 54.03\\
+ & ViTController~\cite{lin2023controller} {\scriptsize(ICASSP\textquotesingle23)} & 59.94 & 945.72 & 44.67 & 45.76 & 54.91 & 55.39\\
+ & FDAM~\cite{chen2025fdam} {\scriptsize(ICCV\textquotesingle25)} & 60.64 & 946.31 & 45.37 & 46.20 & 55.77 & 55.84\\
+ & LocAt~\cite{hajimiri2026locality} {\scriptsize(ICLR\textquotesingle26)} & 59.94 & 945.76 & 45.38 & 46.35 & 55.89 & 56.08\\
+ & \highlightmethod{main-table}\textbf{\method{} (ours)} & 60.00 & 946.36 & \textbf{45.86}\,{\scriptsize(+1.03)} & \textbf{46.85}\,{\scriptsize(+0.87)} & \textbf{56.42}\,{\scriptsize(+2.56)} & \textbf{56.88}\,{\scriptsize(+2.85)}\\
+\midrule
+\multirow{5}{*}{MiT-B0} & Vanilla & 31.60 & 865.52 & 40.81 & 41.16 & 51.77 & 50.73\\
+ & ViTController~\cite{lin2023controller} {\scriptsize(ICASSP\textquotesingle23)} & 31.60 & 865.54 & 40.24 & 41.06 & 51.35 & 50.47\\
+ & FDAM~\cite{chen2025fdam} {\scriptsize(ICCV\textquotesingle25)} & 31.71 & 849.56 & 40.94 & 41.24 & 51.80 & 50.68\\
+ & LocAt~\cite{hajimiri2026locality} {\scriptsize(ICLR\textquotesingle26)} & 31.60 & 848.91 & 40.22 & 40.89 & 50.95 & 50.31\\
+ & \highlightmethod{main-table}\textbf{\method{} (ours)} & 31.62 & 865.78 & \textbf{41.08}\,{\scriptsize(+0.27)} & \textbf{41.70}\,{\scriptsize(+0.54)} & \textbf{52.82}\,{\scriptsize(+1.05)} & \textbf{51.90}\,{\scriptsize(+1.17)}\\
+\bottomrule
+\end{tabular*}
+\end{table*}

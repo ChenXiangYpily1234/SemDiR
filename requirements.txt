@@ -1,0 +1,23 @@
+torch>=2.1
+torchvision
+mmengine==0.10.7
+# Install full MMCV 2.1.0 with ops for your PyTorch/CUDA build separately.
+# The vendored mmseg source requires mmcv>=2.0.0rc4,<2.2.0.
+numpy<2
+scipy
+numba
+Pillow
+opencv-python
+packaging
+pyyaml
+addict
+rich
+yapf
+ftfy
+regex
+prettytable
+cityscapesscripts
+huggingface_hub
+safetensors
+einops
+matplotlib
